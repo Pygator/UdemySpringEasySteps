@@ -8,21 +8,20 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean name="emp" class="com.bharath.spring.springcore.Employee" p:id="20" p:name="Rickster">
+    <bean name="hospital" class="com.bharath.spring.springcore.list.Hospital">
 
-        <!--Value as element-->
-        <!--<property name="id">-->
-            <!--<value>20</value>-->
-        <!--</property>-->
-        <!--<property name="name">-->
-            <!--<value>Rick</value>-->
-        <!--</property>-->
+        <property name="name">
+            <value>Global Hospital</value>
+        </property>
 
-        <!--Value as attribute-->
-        <!--<property name="id" value="20" />-->
-        <!--<property name="name" value="Ricky"/>-->
+        <property name="departments">
+            <list>
+                <value>Front Office</value>
+                <value>In Patient</value>
+                <value>Out Patient</value>
 
-        <!--Value as property using the p-schema-->
+            </list>
+        </property>
 
     </bean>
 </beans>
