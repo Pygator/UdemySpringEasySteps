@@ -8,19 +8,24 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean name="cardealer" class="com.bharath.spring.springcore.set.CarDealer">
-
-        <property name="name">
-            <value>RickList Dealer</value>
-        </property>
-
-        <property name="models">
-            <set>
-                <value>Toyota</value>
-                <value>Honda</value>
-                <value>Ford</value>
-            </set>
-        </property>
-
+    <bean name="item1" class="com.bharath.spring.springcore.shoppingcart.Item"
+          p:id="10"
+          p:name="Snickers"
+          p:price="2.00"
+          p:quantity="8">
     </bean>
+
+    <bean name="item2" class="com.bharath.spring.springcore.shoppingcart.Item"
+          p:id="20"
+          p:name="MilkyWay"
+          p:price="2.30"
+          p:quantity="5">
+    </bean>
+
+    <bean name="shoppingcart" class="com.bharath.spring.springcore.shoppingcart.ShoppingCart">
+        <property name="item">
+            <ref bean="item1" />
+        </property>
+    </bean>
+
 </beans>

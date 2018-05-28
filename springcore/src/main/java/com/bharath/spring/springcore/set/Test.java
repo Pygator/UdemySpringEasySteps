@@ -1,6 +1,5 @@
 package com.bharath.spring.springcore.set;
 
-import com.bharath.spring.springcore.list.Hospital;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
